@@ -6,10 +6,15 @@ def standardise_number(phone_number: str) -> str:
     """ Функция принимает строку с номером мобильного телефона
      и приводит к единому формату записи """
 
-    # Проверяем не содержит ли строка быквы
-    has_letters = any(char.isalpha() for char in number_phone)
-
     numbers = []
+
+    # Создаем флаг для проверки
+    has_letters = False
+
+    # Проверяем не содержит ли строка быквы
+    for i in phone_number:
+        if i.isalpha():
+            has_letters = True
 
     if has_letters:
         print("Ошибка, в номере телефона не должно быть букв.")
