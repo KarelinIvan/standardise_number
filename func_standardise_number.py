@@ -10,13 +10,12 @@ def standardise_number(phone_number: str) -> str:
 
     # Создаем флаг для проверки
     has_letters = False
-
     # Проверяем не содержит ли строка быквы
     for i in phone_number:
         if i.isalpha():
             has_letters = True
 
-    if has_letters:
+    if has_letters == True:
         print("Ошибка, в номере телефона не должно быть букв.")
     else:
         line = phone_number
